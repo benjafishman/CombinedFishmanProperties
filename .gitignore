@@ -3,4 +3,3 @@ devenv
 cfp/static
 locenv
 staticfiles
-cfp/settings.py
