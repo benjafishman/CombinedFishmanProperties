@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo copying config settings into project
+
+cp /Users/benfishman/cfp_settings/local/settings.py cfp/
+
+./manage.py runserver
