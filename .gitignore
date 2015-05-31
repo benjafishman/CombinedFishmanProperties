@@ -1,0 +1,4 @@
+myenv
+devenv
+*.pyc
+cfp/static
