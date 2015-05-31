@@ -36,7 +36,7 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
- os.path.join(BASE_DIR, '/properties/static'),
+ os.path.join(BASE_DIR, '../properties/static'),
 )
 
 # Simplified static file serving.
