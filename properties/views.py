@@ -9,3 +9,6 @@ def index(request):
     print(properties)
     context = {'properties': properties }
     return render(request, 'properties/home.html', context)
+
+def contact(request):
+    return render(request,'properties/contact.html')
