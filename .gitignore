@@ -1,4 +1,4 @@
-myenv
 devenv
 *.pyc
 cfp/static
+locenv
