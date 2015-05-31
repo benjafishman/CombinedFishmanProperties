@@ -12,3 +12,6 @@ def index(request):
 
 def contact(request):
     return render(request,'properties/contact.html')
+
+def about(request):
+    return render(request,'properties/about.html')
