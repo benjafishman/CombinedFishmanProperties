@@ -1,0 +1,40 @@
+{% extends 'properties/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+    <link href="{% static 'responsiveSlides/css/responsiveslides.css' %}" rel="stylesheet">
+{% endblock header %}
+
+{% block content %}
+    <h2>Home</h2>
+    <div id="wrapper">
+    <!-- Slideshow 1 -->
+        <ul class="rslides" id="slider1">
+          <li><img src="{% static "images/1.jpg" %}" alt="image 1"></li>
+          <li><img src="{% static "images/2.jpg" %}" alt="image 2"></li>
+          <li><img src="{% static "images/3.jpg" %}" alt="image 3"></li>
+        </ul>
+    </div>
+    {% if properties %}
+        <ul>
+            {% for property in properties %}
+                <li><a href="/properties/{{ property.id }}/">{{ property.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No properties are available.</p>
+    {% endif %}
+{% endblock content %}
+
+{% block script %}
+    <script src="{% static 'responsiveSlides/js/responsiveslides.min.js' %}"></script>
+    <script>
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                maxwidth: 800,
+                speed: 800
+            });
+        });
+    </script>
+{% endblock script %}
