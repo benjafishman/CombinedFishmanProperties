@@ -1,5 +1,4 @@
 devenv
 *.pyc
-static
 locenv
 staticfiles
