@@ -4,16 +4,18 @@
 <head lang="en">
     {% block header %}
     {% endblock %}
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-    <link href="{% static 'bootstrap/css/sticky-footer.css' %}" rel="stylesheet">
+    <!--<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/sticky-footer.css' %}" rel="stylesheet"> -->
     <link href="{% static 'cfp.css' %}" rel="stylesheet">
 
     <meta charset="UTF-8">
     <title>CFP</title>
 </head>
 <body>
+{% block head %}
+{% endblock %}
 <!-- NAVBAR
-================================================== -->
+==================================================
 <body>
 <div class="navbar-wrapper">
     <div class="container">
@@ -55,17 +57,35 @@
 
     </div>
 </div>
+-->
+<div id="header-wrapper">
+    <div id="top">
+        <h1>COMBINED FISHMAN PROPERTIES<br>
+            COMMERCIAL REAL ESTATE
+        </h1>
+    </div>
+    <div id="navbar">
+        {% block nav %}
+            <ul id="nav">
+                <li><a href="{% url 'properties:index' %}">Home</a></li>
+                <li><a href="{% url 'properties:contact' %}">Contact</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="{% url 'properties:about' %}">About</a></li>
+            </ul>
+        {% endblock %}
+    </div>
+</div>
 <div class="container">
     {% block content %}
     {% endblock %}
 </div>
 
 <!-- FOOTER -->
- <footer class="footer">
-      <div class="container">
+<footer class="footer">
+    <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>
+    </div>
+</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 {% block script %}

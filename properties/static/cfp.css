@@ -1,9 +1,38 @@
 body {
-    background-color: #222222;
-    color:#ffffff;
-
+    background-color: #ffffff;
+    color:#419641;
 }
 
 #slider1 {
     width: 100%
+}
+
+#top {
+     border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-color: #000000;
+    text-align: center;
+    height: 200px;
+}
+
+#navbar {
+    background-color: #ffffff;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#navbar li {
+    display: inline;
+    margin: 70px;
+    color: #000000;
+}
+
+#navbar a{
+    color: #000000;
+    text-decoration: none;
 }
