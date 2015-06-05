@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'BlairMdiTC';
+    src: url('fonts/BlairMdITCTTMedium.ttf');
+}
+
 body {
+    font-family: 'BlairMdiTC', 'Geneva', serif;
     background-color: #ffffff;
     color:#419641;
 }
@@ -8,16 +14,18 @@ body {
 }
 
 #top {
-     border-top: 4px solid;
+    border-top: 4px solid;
     border-bottom: 4px solid;
     border-color: #000000;
     text-align: center;
     height: 200px;
+    color: #000000;
 }
 
 #navbar {
     background-color: #ffffff;
 }
+
 
 #navbar ul {
     list-style-type: none;
