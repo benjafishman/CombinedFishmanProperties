@@ -1,0 +1,13 @@
+#wrapper {
+    width: 100% !important;
+    background-color: blue;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    border-color: #000000;
+}
+
+
+#wrapper ul {
+    max-width: none;
+    height: 450px;
+}
