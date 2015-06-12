@@ -2,3 +2,6 @@ devenv
 *.pyc
 locenv
 staticfiles
+
+cfp/development_settings.py
+cfp/settings.py
