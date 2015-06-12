@@ -30,17 +30,20 @@ body {
 #navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
     text-align: center;
 }
 
 #navbar li {
-    display: inline;
-    margin: 70px;
+   display: inline;
+    padding: 62px;
     color: #000000;
 }
 
-#navbar a{
+#navbar a {
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
     color: #000000;
     text-decoration: none;
 }
