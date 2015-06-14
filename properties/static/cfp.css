@@ -9,17 +9,24 @@ body {
     color:#000000;
 }
 
-#slider1 {
-    width: 100%
-}
-
-#top {
+#banner {
     border-top: 4px solid;
     border-bottom: 4px solid;
     border-color: #000000;
     text-align: center;
     height: 200px;
     color: #000000;
+}
+
+#banner h1{
+    margin-top: 5%;
+    font-size: 33px;
+    font-color: #000000;
+    font-weight: bold;
+}
+
+#slider1 {
+    width: 100%
 }
 
 #navbar {
@@ -52,5 +59,20 @@ body {
 @media screen and (max-width: 930px) {
     #navbar li {
         padding: 21px;
+    }
+
+    #banner {
+        height: 138px;
+    }
+
+    #banner h1{
+        margin-top: 5%;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+     #navbar li {
+        display: block;
     }
 }
