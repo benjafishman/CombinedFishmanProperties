@@ -10,3 +10,10 @@ class Property(models.Model):
 
     def __str__(self):
         return self.name
+
+class Apartment(models.Model):
+    property = models.ForeignKey(Property)
+    apt_num = models.CharField(max_length=200)
+    vacant = models.NullBooleanField()
+    number_of_rooms = models.IntegerField()
+
