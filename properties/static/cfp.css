@@ -1,13 +1,19 @@
+body {
+    margin:0;
+
+    padding:0;
+    font-family: 'BlairMdiTC', 'Geneva', serif;
+    background-color: #ffffff;
+    color:#000000;
+}
+
+
 @font-face {
     font-family: 'BlairMdiTC';
     src: url('fonts/BlairMdITCTTMedium.ttf');
 }
 
-body {
-    font-family: 'BlairMdiTC', 'Geneva', serif;
-    background-color: #ffffff;
-    color:#000000;
-}
+
 
 #banner {
     border-top: 4px solid;
@@ -28,31 +34,20 @@ body {
 #slider1 {
     width: 100%
 }
-
-#navbar {
-    background-color: #ffffff;
-}
-
-
-#navbar ul {
-    list-style-type: none;
-    margin: 0;
+.navbar {
     text-align: center;
 }
+.navbar a {
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin-right: 36px;
+    text-decoration: none;
 
-#navbar li {
-   display: inline;
-    padding: 62px;
-    color: #000000;
 }
 
-#navbar a {
-	min-width:140px;
-	height: 50px;
-	text-align: center;
-	line-height: 50px;
-    color: #000000;
-    text-decoration: none;
+.navbar a:hover {
+    background: #3374C2;
 }
 
 /* responsive style */

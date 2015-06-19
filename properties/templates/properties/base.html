@@ -21,14 +21,12 @@
             COMMERCIAL REAL ESTATE
         </h1>
     </div>
-    <div id="navbar">
-            <ul id="nav">
-                <li><a href="{% url 'properties:index' %}">Home</a></li>
-                <li><a href="{% url 'properties:contact' %}">Contact</a></li>
-                <li><a href="#">Properties</a></li>
-                <li><a href="{% url 'properties:about' %}">About</a></li>
-            </ul>
-    </div>
+    <nav class="navbar">
+        <a href="{% url 'properties:index' %}">Home</a>
+        <a href="{% url 'properties:contact' %}">Contact</a>
+        <a href="#">Properties</a>
+        <a href="{% url 'properties:about' %}">About</a>
+    </nav>
 </div>
 <!-- start main body content -->
 <div class="container">
