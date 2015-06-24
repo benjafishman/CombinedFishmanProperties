@@ -1,6 +1,5 @@
 #slide-show-wrapper {
-    height: 450px;
-    width: 960px !important;
+    width: 100%
     background-color: #000000;
     border-top: 4px solid;
     border-bottom: 4px solid;
@@ -10,4 +9,5 @@
 
 #slide-show-wrapper ul {
     max-width: none;
+    height: 450px;
 }
