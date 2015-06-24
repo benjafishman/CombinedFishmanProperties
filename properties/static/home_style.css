@@ -9,5 +9,5 @@
 
 #slide-show-wrapper ul {
     max-width: none;
-    max-resolution: 510px;
+    max-height: 510px;
 }
