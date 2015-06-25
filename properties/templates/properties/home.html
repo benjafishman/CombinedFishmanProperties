@@ -9,10 +9,14 @@
 {% block content %}
     <div id="slide-show-wrapper">
     <!-- Slideshow 1 -->
-        <ul class="rslides" id="slider1">
-          <li><img src="{% static "images/2015_533x400.jpg" %}" alt="2015"></li>
-          <li><img src="{% static "images/armory412x510.jpg" %}" alt="armory"></li>
-        </ul>
+        <div id="slide-show">
+            <ul class="rslides" id="slider1">
+              <li><img src="{% static "images/2015_960x450.jpg" %}" alt="2015"></li>
+              <li><img src="{% static "images/armory960x450.jpg" %}" alt="armory"></li>
+                <li><img src="{% static "images/scruffy960x450.jpg" %}" alt="scruphy"></li>
+                <li><img src="{% static "images/zanzbar960x450.jpg" %}" alt="zanzbar"></li>
+            </ul>
+        </div>
     </div>
     {% if properties %}
         <ul>
