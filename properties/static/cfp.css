@@ -11,6 +11,11 @@ body {
     src: url('fonts/BlairMdITCTTMedium.ttf');
 }
 
+.banner-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .banner-container:before {
     content: ' ';
     display: block;
