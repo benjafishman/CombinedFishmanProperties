@@ -87,3 +87,18 @@ body {
         display: block;
     }
 }
+
+.footer {
+     position: fixed;
+     bottom: 0px;
+     width: 100%;
+     overflow: visible;
+     z-index: 99;
+     padding-top: 5px;
+     padding-bottom: 3px;
+     color: #ffffff;
+     background: #111 none repeat scroll 0% 0%;
+     border-top: solid white 2px;
+     -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
+     height: 34px;
+}
