@@ -53,6 +53,7 @@ body {
     border-bottom: 4px solid #000;
 }
 .navbar a {
+    color: inherit;
     padding: 10px;
     position: relative;
     display: inline-block;
@@ -62,7 +63,7 @@ body {
 }
 
 .navbar a:hover {
-    background: #3374C2;
+    color: #D3D3D3;
 }
 
 /* responsive style */
