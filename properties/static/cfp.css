@@ -65,6 +65,8 @@ body {
 
 .navbar {
     text-align: center;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
 }
 .navbar a {
     padding: 10px;
