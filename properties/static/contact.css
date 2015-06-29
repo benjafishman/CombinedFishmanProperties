@@ -1,8 +1,5 @@
-#map-canvas {
-    width: 400px;
-    height: 500px;
-    margin-left: 100px;
-    float: left
+h2 {
+    margin-left: 30px;
 }
 
 #contact-us-wrapper {
@@ -16,8 +13,15 @@
     float: left;
     margin-right: 10px;
     font-family: Roboto,arial,sans-serif;
+    margin-right: 10px;
 }
 
-h2 {
-    margin-left: 30px;
+#map-canvas {
+    width: 500px;
+    height: 300px;
+    float: left;
+    padding: 1px;
+    border: 1px solid #021A40;
+    margin-left: 10px;
 }
+
