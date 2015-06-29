@@ -1,0 +1,27 @@
+#about-us-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+#about-us-text{
+    width: 45%;
+    float: left;
+    margin-right: 10px;
+    font-family: Roboto,arial,sans-serif;
+}
+
+#about-us-image {
+    width: 45%;
+    float: left;
+    margin-left: 10px;
+}
+
+h2 {
+    margin-left: 30px;
+}
+
+img {
+    padding: 1px;
+    border: 1px solid #021A40;
+}
