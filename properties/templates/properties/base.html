@@ -9,7 +9,7 @@
     <link href="{% static 'cfp.css' %}" rel="stylesheet">
 
     <meta charset="UTF-8">
-    <title>CFP</title>
+    <!--<title>CFP</title>-->
 </head>
 <body>
 {% block head %}
@@ -29,6 +29,12 @@
 <!-- start main body content -->
 <div class="container">
     {% block content %}
+        {% if title %}
+            <title>CFP |  {{ title }}</title>
+        {% else %}
+              <h1>no title</h1>
+             <title>CFP BOSS</title>
+        {% endif %}
     {% endblock %}
 </div>
 

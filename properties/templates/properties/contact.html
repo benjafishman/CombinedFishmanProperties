@@ -8,6 +8,11 @@
 
 {% block content %}
 
+    {% if title %}
+        <title>CFP | {{ title }}</title>
+    {% endif %}
+
+
     <h2>Contact us</h2>
 
      <div id="contact-us-wrapper">
@@ -26,7 +31,6 @@
 {% block script %}
       <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
-        console.log("hello world");
         var myCenter = new google.maps.LatLng(39.7553932,-104.9897716,17);
         function initialize() {
             var mapCanvas = document.getElementById('map-canvas');

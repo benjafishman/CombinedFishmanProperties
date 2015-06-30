@@ -6,12 +6,13 @@ from .models import Property
 
 def index(request):
     properties = Property.objects.all()
-    print(properties)
-    context = {'properties': properties }
+    context = {'properties': properties, 'title':'cfp' }
     return render(request, 'properties/home.html', context)
 
 def contact(request):
-    return render(request,'properties/contact.html')
+    context = {'title':'Contact' }
+    return render(request,'properties/contact.html', context)
 
 def about(request):
-    return render(request,'properties/about.html')
+    context = {'title':'About Us' }
+    return render(request,'properties/about.html', context)

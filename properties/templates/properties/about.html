@@ -7,6 +7,9 @@
 {% endblock header %}
 
 {% block content %}
+    {% if title %}
+        <title>CFP | {{ title }}</title>
+    {% endif %}
     <h2>About us</h2>
     <div id="about-us-wrapper">
         <div id="about-us-text">
