@@ -87,3 +87,36 @@ body {
         display: block;
     }
 }
+
+nav #mobile-nav-bar {
+    display: none;
+}
+
+nav #mobile-nav-bar #mobile-text {
+    float: left;
+    margin-top: 1%;
+    margin-left: 12%;
+
+}
+
+@media (max-width: 960px) {
+
+    .navbar a {
+        display:none;
+    }
+
+    nav #mobile-nav-bar {
+           display: block;
+    }
+
+    nav #mobile-nav-bar > select {
+        width:200px;
+        height: 30px;
+        font-family: 'BlairMdiTC', 'BlairMdiTC', 'Geneva', serif;
+
+    }
+    
+    
+
+
+}
