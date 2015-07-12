@@ -25,8 +25,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
-    background-image: url('images/bricks1327x150.png');
+    /*opacity: 0;*/
+    background-image: url('images/brickscopy.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
     -ms-background-size: cover;
@@ -36,11 +36,12 @@ body {
     background-size: cover;
 
 }
-.banner-container h1{
+.banner-container h1 {
     text-align: center;
     z-index: 2;
     position: relative;
     color: #000;
+    font-size: 34px;;
 }
 
 #slider1 {
@@ -68,23 +69,28 @@ body {
 
 /* responsive style */
 @media screen and (max-width: 930px) {
-    #navbar li {
-        padding: 21px;
-    }
 
     #banner {
         height: 138px;
     }
 
-    #banner h1{
-        margin-top: 5%;
+    .banner-container h1 {
+        margin-top: 2%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+     .banner-container h1 {
+        margin-top: 2%;
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 475px) {
-     #navbar li {
-        display: block;
+@media screen and (max-width: 480px) {
+     .banner-container h1 {
+        margin-top: 2%;
+        font-size: 15px;
     }
 }
 
