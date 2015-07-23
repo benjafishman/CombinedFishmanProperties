@@ -25,8 +25,8 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.6;
-    background-image: url('images/bricks1327x150.png');
+    /*opacity: 0;*/
+    background-image: url('images/brickscopy.png');
     background-repeat: no-repeat;
     background-position: 50% 0;
     -ms-background-size: cover;
@@ -36,11 +36,12 @@ body {
     background-size: cover;
 
 }
-.banner-container h1{
+.banner-container h1 {
     text-align: center;
     z-index: 2;
     position: relative;
     color: #000;
+    font-size: 34px;;
 }
 
 #slider1 {
@@ -68,37 +69,73 @@ body {
 
 /* responsive style */
 @media screen and (max-width: 930px) {
-    #navbar li {
-        padding: 21px;
-    }
 
     #banner {
         height: 138px;
     }
 
-    #banner h1{
-        margin-top: 5%;
+    .banner-container h1 {
+        margin-top: 2%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+     .banner-container h1 {
+        margin-top: 2%;
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 475px) {
-     #navbar li {
-        display: block;
+@media screen and (max-width: 480px) {
+     .banner-container h1 {
+        margin-top: 2%;
+        font-size: 15px;
     }
 }
 
-.footer {
-     position: fixed;
-     bottom: 0px;
-     width: 100%;
-     overflow: visible;
-     z-index: 99;
-     padding-top: 5px;
-     padding-bottom: 3px;
-     color: #ffffff;
-     background: #111 none repeat scroll 0% 0%;
-     border-top: solid white 2px;
-     -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
-     height: 34px;
+nav #mobile-nav-bar {
+    display: none;
 }
+
+nav #mobile-nav-bar #mobile-text {
+    float: left;
+    margin-top: 1%;
+    margin-left: 12%;
+
+}
+
+@media (max-width: 960px) {
+
+    .navbar a {
+        display:none;
+    }
+
+    nav #mobile-nav-bar {
+           display: block;
+    }
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    overflow: visible;
+    z-index: 99;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    color: #ffffff;
+    background: #111 none repeat scroll 0% 0%;
+    border-top: solid white 2px;
+    -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
+    height: 34px;
+}
+
+    nav #mobile-nav-bar > select {
+        width:200px;
+        height: 30px;
+        font-family: 'BlairMdiTC', 'BlairMdiTC', 'Geneva', serif;
+
+    }
+    
