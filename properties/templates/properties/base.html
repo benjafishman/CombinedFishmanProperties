@@ -26,8 +26,10 @@
             <a href="#">Properties</a>
             <a href="{% url 'properties:about' %}">About</a>
         </div>
-        <div id="mobile-nav-bar"><div id="mobile-text">cfp</div></div>
-<!--
+        <div id="mobile-nav-bar">
+            <div id="mobile-text">cfp</div>
+        </div>
+        <!--
         <select>
             <option value="{% url 'properties:index' %}">Home</option>
             <option value="{% url 'properties:contact' %}">Contact</option>
@@ -40,20 +42,19 @@
 <div class="container">
     {% block content %}
         {% if title %}
-            <title>CFP |  {{ title }}</title>
+            <title>CFP | {{ title }}</title>
         {% else %}
-              <h1>no title</h1>
-             <title>CFP BOSS</title>
+            <h1>no title</h1>
+            <title>CFP BOSS</title>
         {% endif %}
     {% endblock %}
 </div>
 
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted">Copyright &copy; CFP </p>
-    </div>
-</footer>
+<div class="footer">
+    This footer will always be positioned at the bottom of the page, but
+    <strong>not fixed</strong>.
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
@@ -62,21 +63,21 @@
 
     $("<option />", {
         "selected": "selected",
-        "value"   : "",
-        "text"    : "Go to..."
+        "value": "",
+        "text": "Go to..."
     }).appendTo("nav select");
 
-    $("nav a").each(function() {
-     var el = $(this);
-    $("<option />", {
-        "value"   : el.attr("href"),
-         "text"    : el.text()
+    $("nav a").each(function () {
+        var el = $(this);
+        $("<option />", {
+            "value": el.attr("href"),
+            "text": el.text()
         }).appendTo("nav select");
     });
 
-    $("nav select").change(function() {
-  window.location = $(this).find("option:selected").val();
-});
+    $("nav select").change(function () {
+        window.location = $(this).find("option:selected").val();
+    });
 </script>
 {% block script %}
 {% endblock %}

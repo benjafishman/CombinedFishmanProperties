@@ -36,6 +36,7 @@ body {
     background-size: cover;
 
 }
+
 .banner-container h1 {
     text-align: center;
     z-index: 2;
@@ -53,6 +54,7 @@ body {
     border-top: 4px solid #000;
     border-bottom: 4px solid #000;
 }
+
 .navbar a {
     color: inherit;
     padding: 10px;
@@ -81,14 +83,14 @@ body {
 }
 
 @media screen and (max-width: 736px) {
-     .banner-container h1 {
+    .banner-container h1 {
         margin-top: 2%;
         font-size: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-     .banner-container h1 {
+    .banner-container h1 {
         margin-top: 2%;
         font-size: 15px;
     }
@@ -105,37 +107,35 @@ nav #mobile-nav-bar #mobile-text {
 
 }
 
+nav #mobile-nav-bar > select {
+    width: 200px;
+    height: 30px;
+    font-family: 'BlairMdiTC', 'BlairMdiTC', 'Geneva', serif;
+
+}
+
 @media (max-width: 960px) {
 
     .navbar a {
-        display:none;
+        display: none;
     }
 
     nav #mobile-nav-bar {
-           display: block;
+        display: block;
     }
 
 }
 
 .footer {
-    position: fixed;
-    bottom: 0px;
+     position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+    display: inline-block;
     width: 100%;
-    overflow: visible;
-    z-index: 99;
-    padding-top: 5px;
-    padding-bottom: 3px;
-    color: #ffffff;
-    background: #111 none repeat scroll 0% 0%;
-    border-top: solid white 2px;
-    -webkit-box-shadow: 0px -5px 15px 0px #bfbfbf;
-    height: 34px;
 }
 
-    nav #mobile-nav-bar > select {
-        width:200px;
-        height: 30px;
-        font-family: 'BlairMdiTC', 'BlairMdiTC', 'Geneva', serif;
 
-    }
-    
