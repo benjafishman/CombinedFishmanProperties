@@ -127,15 +127,17 @@ nav #mobile-nav-bar > select {
 }
 
 .footer {
-     position: relative;
+    position: relative;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: #efefef;
+    /*background-color: #eeeeee;*/
     text-align: center;
     display: inline-block;
     width: 100%;
+    align-content: center;
+    font-size: 12px;
 }
 
 
