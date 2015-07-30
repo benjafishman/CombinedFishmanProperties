@@ -10,7 +10,7 @@ class ApartmentInline(admin.TabularInline):
 '''
 
 class PropertyAdmin(admin.ModelAdmin):
-    fields = ['name', 'address', 'description']
+    fields = ['name', 'address', 'description', 'history']
     #inlines = [ApartmentInline]
 
 admin.site.register(Property,PropertyAdmin)
