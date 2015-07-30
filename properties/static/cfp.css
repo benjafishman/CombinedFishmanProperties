@@ -1,78 +1,148 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'BlairMdiTC', 'Geneva', serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
 @font-face {
     font-family: 'BlairMdiTC';
     src: url('fonts/BlairMdITCTTMedium.ttf');
 }
 
-body {
-    font-family: 'BlairMdiTC', 'Geneva', serif;
-    background-color: #ffffff;
-    color:#000000;
+.banner-container {
+    position: relative;
+    overflow: hidden;
 }
 
-#banner {
-    border-top: 4px solid;
-    border-bottom: 4px solid;
-    border-color: #000000;
+.banner-container:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /*opacity: 0;*/
+    background-image: url('images/brickscopy.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.banner-container h1 {
     text-align: center;
-    height: 200px;
-    color: #000000;
-}
-
-#banner h1{
-    margin-top: 5%;
-    font-size: 33px;
-    font-color: #000000;
-    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    color: #000;
+    font-size: 34px;;
 }
 
 #slider1 {
     width: 100%
 }
 
-#navbar {
-    background-color: #ffffff;
-}
-
-
-#navbar ul {
-    list-style-type: none;
-    margin: 0;
+.navbar {
     text-align: center;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
 }
 
-#navbar li {
-   display: inline;
-    padding: 62px;
-    color: #000000;
-}
-
-#navbar a {
-	min-width:140px;
-	height: 50px;
-	text-align: center;
-	line-height: 50px;
-    color: #000000;
+.navbar a {
+    color: inherit;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin-right: 36px;
     text-decoration: none;
+
+}
+
+.navbar a:hover {
+    color: #D3D3D3;
 }
 
 /* responsive style */
 @media screen and (max-width: 930px) {
-    #navbar li {
-        padding: 21px;
-    }
 
     #banner {
         height: 138px;
     }
 
-    #banner h1{
-        margin-top: 5%;
+    .banner-container h1 {
+        margin-top: 2%;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .banner-container h1 {
+        margin-top: 2%;
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 475px) {
-     #navbar li {
-        display: block;
+@media screen and (max-width: 480px) {
+    .banner-container h1 {
+        margin-top: 2%;
+        font-size: 15px;
     }
 }
+
+nav #mobile-nav-bar {
+    display: none;
+}
+
+nav #mobile-nav-bar #mobile-text {
+    float: left;
+    margin-top: 1%;
+    margin-left: 12%;
+
+}
+
+nav #mobile-nav-bar > select {
+    width: 200px;
+    height: 30px;
+    font-family: 'BlairMdiTC', 'BlairMdiTC', 'Geneva', serif;
+
+}
+
+@media (max-width: 960px) {
+
+    .navbar a {
+        display: none;
+    }
+
+    nav #mobile-nav-bar {
+        display: block;
+    }
+
+}
+
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    /*background-color: #eeeeee;*/
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    align-content: center;
+    font-size: 12px;
+}
+
+
