@@ -6,15 +6,16 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'BlairMdiTC', 'Geneva', serif;
+    font-family: Roboto, arial, sans-serif;
     background-color: #ffffff;
     color: #000000;
 }
-
+/*
 @font-face {
     font-family: 'BlairMdiTC';
     src: url('fonts/BlairMdITCTTMedium.ttf');
 }
+*/
 
 .banner-container {
     position: relative;
@@ -50,10 +51,11 @@ body {
     font-size: 34px;;
 }
 
-#slider1 {
-    width: 100%
+.content-container {
+    max-width: 1000px;
+    margin: 0px auto;
+    position: relative;
 }
-
 .navbar {
     text-align: center;
     border-top: 4px solid #000;
@@ -136,7 +138,7 @@ nav #mobile-nav-bar > select {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     /*background-color: #eeeeee;*/
     text-align: center;
     display: inline-block;

@@ -1,17 +1,17 @@
-#about-us-wrapper {
+#property-detail-wrapper {
     width: 100%;
     margin: 0 auto;
     display: block;
 }
 
-#about-us-text{
+#property-history-text{
     width: 45%;
     float: left;
     margin-right: 10px;
     font-family: Roboto,arial,sans-serif;
 }
 
-#about-us-image {
+.slide-show-wrapper {
     width: 45%;
     float: left;
     margin-left: 10px;

@@ -8,6 +8,8 @@ class Property(models.Model):
     address = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
     history = models.CharField(max_length=500, null=True)
+    number_of_layouts = models.IntegerField(default=0)
+    image_file = models.CharField(max_length=200, default='none')
 
     def __str__(self):
         return self.name

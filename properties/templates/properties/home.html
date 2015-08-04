@@ -7,30 +7,30 @@
 {% endblock header %}
 
 {% block content %}
-    <div id="slide-show-wrapper">
-    <!-- Slideshow 1 -->
-        <div id="slide-show">
-            <ul class="rslides" id="slider1">
-                <li><img src="{% static "images/2015_960x450.jpg" %}" alt="2015"></li>
-                <li><img src="{% static "images/armory960x450.jpg" %}" alt="armory"></li>
-                <li><img src="{% static "images/scruffy960x450.jpg" %}" alt="scruphy"></li>
-                <li><img src="{% static "images/zanzbar960x450.jpg" %}" alt="zanzbar"></li>
-            </ul>
-        </div>
+    <div class="slide-show-wrapper">
+        <!-- Slideshow 1 -->
+        <!--<div id="slide-show">-->
+        <ul class="rslides rslides1" id="slider1" style="">
+            <li><img src="{% static "images/2015_960x450.jpg" %}" alt="2015"></li>
+            <li><img src="{% static "images/armory960x450.jpg" %}" alt="armory"></li>
+            <li><img src="{% static "images/scruffy960x450.jpg" %}" alt="scruphy"></li>
+            <li><img src="{% static "images/zanzbar960x450.jpg" %}" alt="zanzbar"></li>
+        </ul>
+        <!--</div>-->
     </div>
 {% endblock content %}
 
 {% block script %}
     <script src="{% static 'responsiveSlides/js/responsiveslides.min.js' %}"></script>
     <script>
-        $(function () {
-            // Slideshow 1
-            $("#slider1").responsiveSlides({
-                speed: 800,
-                auto: true,
-                pager: false
-
-            });
-        });
+       $(function () {
+          // Slideshow 1
+          $("#slider1").responsiveSlides({
+            auto: false,
+            pagination: true,
+            nav: true,
+            fade: 500
+          });
+    });
     </script>
 {% endblock script %}

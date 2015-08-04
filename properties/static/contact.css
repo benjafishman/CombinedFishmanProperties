@@ -1,14 +1,5 @@
-#map-canvas {
-    width: 500px;
-    height: 300px;
-    float: left;
-    padding: 1px;
-    border: 1px solid #021A40;
-    margin-left: 10px;
-}
-
 #contact-us-wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -18,9 +9,18 @@
     float: left;
     margin-right: 10px;
     font-family: Roboto,arial,sans-serif;
-    margin-right: 10px;
+}
+
+#map-canvas {
+    /*width: 500px;*/
+    width: 450px;
+    height: 300px;
+    float: left;
+    padding: 1px;
+    border: 1px solid #021A40;
+    margin-left: 10px;
 }
 
 h2 {
-    margin-left: 100px;
+    margin-left: 5px;
 }

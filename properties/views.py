@@ -19,4 +19,5 @@ def about(request):
 
 def propertyDetail(request, property_id):
     property = get_object_or_404(Property, pk=property_id)
-    return render(request, 'properties/detail.html', {'property': property})
+    loop_times = range(0,property.number_of_layouts)
+    return render(request, 'properties/detail.html', {'property': property, 'loop_times': loop_times})

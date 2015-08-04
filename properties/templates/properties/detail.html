@@ -4,6 +4,7 @@
 
 {% block header %}
     <link href="{% static 'detail.css' %}" rel="stylesheet">
+    <link href="{% static 'home_style.css' %}" rel="stylesheet">
 {% endblock header %}
 
 
@@ -11,20 +12,46 @@
     {% if title %}
         <title>CFP | {{ title }}</title>
     {% endif %}
-    <div id="propertty-detail-wrapper">
+    <div id="property-detail-wrapper">
         <h1>{{ property.name }}</h1>
-        <div id="property-history-wrapper">
+
+        <div id="property-history-text">
             {% if property.history %}
                 <p>{{ property.history }}</p>
             {% else %}
                 <p>This property has no history</p>
-            {%  endif %}
+            {% endif %}
         </div>
-        <div id="property-picture">
-            <img src="http://lorempixel.com/500/300/" alt="random lorempixel image"/>
-        </div>
-        <div id="layout-slideshow-wrapper">
-            <img src="http://lorempixel.com/500/300/" alt="random lorempixel image"/>
+        <div class="slide-show-wrapper">
+            <!-- Layout Slideshow 1 -->
+            <ul class="rslides rslides1" id="slider1" style="">
+                {% for i in loop_times %}
+                    {% with i|add:"+1" as i%}
+                    {% with y=i|stringformat:"s" %}
+                     {% with picture="images/properties/"|add:property.image_file|add:"/level_"|add:y|add:".png" %}
+                         <li><img src="{% static picture %}" alt="{{ property.name }}"></li>
+                         {% endwith %}
+                    {% endwith %}
+                    {% endwith %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
 {% endblock content %}
+
+{% block script %}
+    <script src="{% static 'responsiveSlides/js/responsiveslides.min.js' %}"></script>
+    <script>
+       $(function () {
+          // Slideshow 1
+          $("#slider1").responsiveSlides({
+            auto: false,
+            pagination: true,
+            nav: true,
+            fade: 500
+          });
+    });
+
+
+    </script>
+{% endblock script %}

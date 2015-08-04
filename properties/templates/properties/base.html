@@ -39,15 +39,15 @@
     </nav>
 </div>
 <!-- start main body content -->
-<div class="container">
-    {% block content %}
-        {% if title %}
-            <title>CFP | {{ title }}</title>
-        {% else %}
-            <h1>no title</h1>
-            <title>CFP BOSS</title>
-        {% endif %}
-    {% endblock %}
+    <div class="content-container">
+        {% block content %}
+            {% if title %}
+                <title>CFP | {{ title }}</title>
+            {% else %}
+                <h1>no title</h1>
+                <title>CFP BOSS</title>
+            {% endif %}
+        {% endblock %}
 </div>
 
 <!-- FOOTER -->
