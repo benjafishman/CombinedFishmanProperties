@@ -21,33 +21,42 @@
     </div>
     <nav class="navbar">
         <div id="main-nav-bar">
-            <a href="{% url 'properties:index' %}">Home</a>
-            <a href="{% url 'properties:contact' %}">Contact</a>
-            <a href="#">Properties</a>
-            <a href="{% url 'properties:about' %}">About</a>
+            <ul>
+                <li><a href="{% url 'properties:index' %}">Home</a></li>
+                <li><a href="{% url 'properties:contact' %}">Contact</a></li>
+                <li>
+                    Properties
+
+                    <ul>
+                        {%  if properties %}
+                            {% for property in properties %}
+                               <!-- <li><a href="/properties/{{ property.id }}/detail">{{ property.name }}</a></li>-->
+                                <li><a href="{% url 'properties:propertyDetail' property.id %}">{{ property.name }}</a></li>
+
+                            {% endfor %}
+                        {% else %}
+                            <p>No properties available</p>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li><a href="{% url 'properties:about' %}">About</a></li>
+            </ul>
         </div>
         <div id="mobile-nav-bar">
             <div id="mobile-text">cfp</div>
         </div>
-        <!--
-        <select>
-            <option value="{% url 'properties:index' %}">Home</option>
-            <option value="{% url 'properties:contact' %}">Contact</option>
-            <option href="#">Properties</option>
-            <option href="{% url 'properties:about' %}">About</option>
-        </select> -->
     </nav>
 </div>
 <!-- start main body content -->
-    <div class="content-container">
-        {% block content %}
-            {% if title %}
-                <title>CFP | {{ title }}</title>
-            {% else %}
-                <h1>no title</h1>
-                <title>CFP BOSS</title>
-            {% endif %}
-        {% endblock %}
+<div class="content-container">
+    {% block content %}
+        {% if title %}
+            <title>CFP | {{ title }}</title>
+        {% else %}
+            <h1>no title</h1>
+            <title>CFP BOSS</title>
+        {% endif %}
+    {% endblock %}
 </div>
 
 <!-- FOOTER -->
@@ -77,6 +86,7 @@
     $("nav select").change(function () {
         window.location = $(this).find("option:selected").val();
     });
+
 </script>
 {% block script %}
 {% endblock %}

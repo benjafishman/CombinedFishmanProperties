@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     display: block;
+    margin-left: 10%;
 }
 
 #about-us-text{
@@ -9,6 +10,10 @@
     float: left;
     margin-right: 10px;
     font-family: Roboto,arial,sans-serif;
+}
+
+#about-us-text p {
+    margin: auto;
 }
 
 #about-us-image {
@@ -25,3 +30,4 @@ img {
     padding: 1px;
     border: 1px solid #021A40;
 }
+

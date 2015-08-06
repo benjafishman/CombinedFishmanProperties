@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
     display: block;
+    margin-left: 10%;
 }
 
 #property-history-text{
@@ -12,16 +13,72 @@
 }
 
 .slide-show-wrapper {
-    width: 45%;
+    width: 50%;
     float: left;
     margin-left: 10px;
-}
-
-h2 {
-    margin-left: 5px;
+    position: relative;
 }
 
 img {
     padding: 1px;
-    border: 1px solid #021A40;
+    border: 2px solid #021A40;
+}
+
+#slider1 {
+    width: 100% !important;
+
+}
+
+.rslides {
+    position: relative;
+    list-style: outside none none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+
+
+.rslides_tabs {
+    background: rgba(0, 0, 0, 0.25) none repeat scroll 0% 0%;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3), 0px 0px 5px #000 inset;
+    font-size: 18px;
+    list-style: outside none none;
+    margin: 0px 0px 50px 0px;
+    max-width: 472px;
+    padding: 10px 0px;
+    text-align: center;
+    
+}
+
+.rslides_tabs li:first-child {
+    margin-left: 0px;
+}
+
+.rslides_tabs li {
+    display: inline;
+    float: none;
+    margin-right: 1px;
+}
+
+.rslides_tabs {
+    font-size: 18px;
+    list-style: outside none none;
+    text-align: center;
+}
+
+.rslides_tabs .rslides_here a {
+    background: rgba(255, 255, 255, 0.1) none repeat scroll 0% 0%;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.rslides_tabs a {
+    width: auto;
+    line-height: 20px;
+    padding: 9px 20px;
+    height: auto;
+    background: transparent none repeat scroll 0% 0%;
+    display: inline;
 }

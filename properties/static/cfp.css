@@ -1,21 +1,75 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-}
-
-body {
     margin: 0;
     padding: 0;
     font-family: Roboto, arial, sans-serif;
     background-color: #ffffff;
     color: #000000;
 }
-/*
-@font-face {
-    font-family: 'BlairMdiTC';
-    src: url('fonts/BlairMdITCTTMedium.ttf');
+/***** Navbar dropdown ****/
+#main-nav-bar {
+    background-color: #ffffff;
 }
-*/
+
+.navbar ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+
+.navbar ul li {
+  font: bold 20px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 10px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 3;
+}
+.navbar ul li:hover {
+  background: #555;
+  color: #fff;
+}
+
+.navbar ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 146px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+.navbar ul li ul li {
+  background: #000;
+  display: block;
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+.navbar ul li ul li:hover { background: #666; }
+.navbar ul li:hover ul {
+  display: block;
+  opacity: 0.9;
+  visibility: visible;
+}
 
 .banner-container {
     position: relative;
@@ -52,9 +106,10 @@ body {
 }
 
 .content-container {
-    max-width: 1000px;
+    width: 100%;
     margin: 0px auto;
     position: relative;
+
 }
 .navbar {
     text-align: center;
@@ -64,7 +119,7 @@ body {
 
 .navbar a {
     color: inherit;
-    padding: 10px;
+    padding: 0px;
     position: relative;
     display: inline-block;
     margin-right: 36px;
@@ -145,6 +200,7 @@ nav #mobile-nav-bar > select {
     width: 100%;
     align-content: center;
     font-size: 12px;
+    color: #ee;
 }
 
 
