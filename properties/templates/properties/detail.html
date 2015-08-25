@@ -1,19 +1,30 @@
 {% extends 'properties/base.html' %}
 {% load staticfiles %}
+{% load property_details %}
 
 
 {% block header %}
     <link href="{% static 'detail.css' %}" rel="stylesheet">
+    {% if title %}
+            <title>CFP | {{ title }}</title>
+    {% endif %}
 {% endblock header %}
 
 
 {% block content %}
     <div id="property-detail-wrapper">
-    {% if title %}
-        <title>CFP | {{ title }}</title>
-    {% endif %}
 
-        <h1>{{ property.name }}</h1>
+        <div id="prop-title-box">
+
+            <h1>{{ property.name }}</h1>
+            {% for line in property.address|addresser %}
+                <p>{{ line }}</p>
+            {% endfor %}
+        </div>
+
+
+
+
 
         <div id="property-history-text">
             <h2>History</h2>
@@ -52,5 +63,6 @@
             fade: 500
           });
     });
+
     </script>
 {% endblock script %}
