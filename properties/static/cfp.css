@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Roboto, arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #F1F1F1;
     color: #000000;
 }
 /***** Navbar dropdown ****/
@@ -25,7 +25,7 @@ html, body {
   display: inline-block;
   margin-right: -4px;
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 45px;
   background: #fff;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -109,6 +109,7 @@ html, body {
     width: 100%;
     margin: 0px auto;
     position: relative;
+    background-color: #F1F1F1;
 
 }
 .navbar {

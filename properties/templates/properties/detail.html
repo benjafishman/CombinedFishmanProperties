@@ -6,7 +6,7 @@
 {% block header %}
     <link href="{% static 'detail.css' %}" rel="stylesheet">
     {% if title %}
-            <title>CFP | {{ title }}</title>
+        <title>CFP | {{ title }}</title>
     {% endif %}
 {% endblock header %}
 
@@ -14,17 +14,51 @@
 {% block content %}
     <div id="property-detail-wrapper">
 
-        <div id="prop-title-box">
+        <div id="top-left-tile" class="tile left-tile top-tile ">
 
-            <h1>{{ property.name }}</h1>
-            {% for line in property.address|addresser %}
-                <p>{{ line }}</p>
-            {% endfor %}
+            <div id="title-content" class="total-center">
+
+                <h1 class="center-text">{{ property.name }}</h1>
+                {% for line in property.address|addresser %}
+                    <p class="center-text">{{ line }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="top-right-tile" class="tile right-tile top-tile ">
+            <img src="http://lorempixel.com/450/300/" alt="random lorempixel image"/>
+        </div>
+
+        <div id="bottom-left-tile" class="tile left-tile ">
+            <div class="slide-show-wrapper">
+                <!-- Layout Slideshow 1 -->
+                <ul class="rslides rslides1" id="slider1" style="">
+                    {% for i in loop_times %}
+                        {% with i|add:"+1" as i %}
+                            {% with y=i|stringformat:"s" %}
+                                {% with picture="images/properties/"|add:property.image_file|add:"/level_"|add:y|add:".png" %}
+                                    <li><img src="{% static picture %}" alt="{{ property.name }}"></li>
+                                {% endwith %}
+                            {% endwith %}
+                        {% endwith %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div id="bottom-right-tile" class="center-history-text tile right-tile">
+            <h2>History</h2>
+
+            <p>Donec id porttitor ligula. Donec id fermentum orci. Fusce et dapibus neque. Morbi sollicitudin ultrices
+                massa. Etiam vehicula risus sit amet velit accumsan, sit amet sodales felis elementum. Cras vehicula
+                augue eu lorem lacinia, ac tristique dolor elementum. Donec at neque gravida, lobortis dui quis, luctus
+                velit. Sed vitae luctus tellus, sit amet facilisis metus. Ut nec varius diam. Maecenas id porttitor dui.
+                Maecenas non erat varius, ultrices nibh posuere, lacinia tellus. Maecenas at tempus mauris, ut
+                condimentum quam.</p>
         </div>
 
 
-
-
+        <!--
 
         <div id="property-history-text">
             <h2>History</h2>
@@ -35,12 +69,13 @@
             {% endif %}
         </div>
         <div class="slide-show-wrapper">
-            <!-- Layout Slideshow 1 -->
+            <!-- Layout Slideshow 1
             <ul class="rslides rslides1" id="slider1" style="">
                 {% for i in loop_times %}
                     {% with i|add:"+1" as i %}
                         {% with y=i|stringformat:"s" %}
-                            {% with picture="images/properties/"|add:property.image_file|add:"/level_"|add:y|add:".png" %}
+
+            {% with picture="images/properties/"|add:property.image_file|add:"/level_"|add:y|add:".png" %}
                                 <li><img src="{% static picture %}" alt="{{ property.name }}"></li>
                             {% endwith %}
                         {% endwith %}
@@ -48,7 +83,7 @@
                 {% endfor %}
             </ul>
 
-        </div>
+        </div> -->
     </div>
 {% endblock content %}
 
@@ -63,6 +98,10 @@
             fade: 500
           });
     });
+
+
+
+
 
     </script>
 {% endblock script %}
