@@ -1,12 +1,13 @@
 #about-us-wrapper {
-    width: 100%;
-    margin: 0 auto;
+    width: 960px;
+    margin: 20px auto;
     display: block;
-    margin-left: 10%;
+    font-family: Roboto,arial,sans-serif;
+    overflow: hidden;
 }
 
 .tile {
-    width: 450px;
+    width: 475px;
     border-style: none;
     margin-top: 5px;
     margin-bottom: 5px;
