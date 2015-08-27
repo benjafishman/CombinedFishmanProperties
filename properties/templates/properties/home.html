@@ -20,13 +20,17 @@
         <!--</div>-->
     </div>
     <div id="property-gallery">
-        {% for property in properties %}
-            <div class="gallery-item">
-               <!-- <img src="http://lorempixel.com/150/150/" alt="{{ property.name }}"/> -->
-                <a href="{% url 'properties:propertyDetail' property.id %}"><img src="http://lorempixel.com/150/150/" alt="{{ property.name }}"/></a>
-                <p>{{ property.name }}</p>
-            </div>
-        {%  endfor %}
+        <div id="gallery-box">
+            {% for property in properties %}
+                <div class="gallery-item">
+                    <!-- <img src="http://lorempixel.com/150/150/" alt="{{ property.name }}"/> -->
+                    <a href="{% url 'properties:propertyDetail' property.id %}"><img
+                            src="http://lorempixel.com/150/150/" alt="{{ property.name }}"/></a>
+
+                    <p>{{ property.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
 
     </div>
 {% endblock content %}
@@ -43,5 +47,6 @@
             fade: 500
           });
     });
+
     </script>
 {% endblock script %}
