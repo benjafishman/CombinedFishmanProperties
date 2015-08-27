@@ -45,3 +45,35 @@
 .rslides1_nav:focus, .rslides2_nav:focus, .rslides3_nav:focus {
     outline: medium none;
 }
+
+#property-gallery {
+    width: 95%;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.gallery-item {
+    float: left;
+    margin: 0px 3% 0 3%;
+    text-align: center;
+}
+
+.gallery-item > a > img {
+    border: 2px solid;
+    border-radius:150px;
+}
+
+.gallery-item a:hover {
+    color: #fff;
+}
+
+/*
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	/*background: url(http://link-to-your/image.jpg) no-repeat;
+}
+*/
