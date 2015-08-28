@@ -1,13 +1,17 @@
 .slide-show-wrapper {
+    background-color: #000000;
+
     margin-bottom: 15px;
     position: relative;
     float: left;
     width: 100%;
+    border-bottom: 1px solid #000;
 }
 
 
 #slider1 {
-    width: 100% !important;
+    max-width: 960px;
+    height: 100%;
 
 }
 

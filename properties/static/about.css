@@ -19,6 +19,14 @@
     height:300px
 }
 
+
+.top-left-tile {
+    margin-left: 74px;
+    margin-right: 69px;
+    width:312px;
+    border-radius: 150px;
+}
+
 .center-text {
     top: 50%;
     line-height: 22px;

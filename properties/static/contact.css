@@ -39,7 +39,7 @@ ul {
     line-height: 22px;
 }
 #contact-us-box {
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     font-family: Roboto,arial,sans-serif;
 }
 
@@ -53,3 +53,9 @@ ul {
 
 }
 
+.top-left-tile {
+    margin-left: 81.5px;
+    margin-right: 81.5px;
+    width:312px;
+    border-radius: 150px;
+}

@@ -45,6 +45,10 @@
 }
 
 #top-left-tile {
+    margin-left: 74px;
+    margin-right: 69px;
+    width:312px;
+    border-radius: 150px;
 }
 
 

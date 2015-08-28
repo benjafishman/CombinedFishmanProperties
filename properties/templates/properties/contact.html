@@ -9,29 +9,29 @@
 {% block content %}
     <div id="contact-us-wrapper">
 
-    {% if title %}
-        <title>CFP | {{ title }}</title>
-    {% endif %}
+        {% if title %}
+            <title>CFP | {{ title }}</title>
+        {% endif %}
 
 
-    <h2>Contact us</h2>
+        <h2>Contact us</h2>
 
 
-        <div id="contact-us-box" class="tile">
+        <div id="contact-us-box" class="tile top-left-tile">
             <div id="contact-txt" class="center-text">
-               <p> Combined Fishman Properties
-                <br>2231 Larimer St. Denver CO 80205</p>
+                <p> Combined Fishman Properties
+                    <br>2231 Larimer St. Denver CO 80205</p>
                 <a href="mailto:contact@combinedfishmanproperties.com">contact@combinedfishmanproperties.com</a>
                 <br><a href="tel:303-297-0077">(303) 297-0077</a>
             </div>
         </div>
-         <div id="map-canvas" class="tile"></div>
+        <div id="map-canvas" class="tile"></div>
     </div>
 
 {% endblock content %}
 
 {% block script %}
-      <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         var myCenter = new google.maps.LatLng(39.7553932,-104.9897716,17);
         function initialize() {
@@ -48,5 +48,6 @@
             marker.setMap(map);
         }
         google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
 {% endblock script %}
